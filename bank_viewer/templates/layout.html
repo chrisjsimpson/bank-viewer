@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Bank View</title>
+	<meta name="theme-color" content="#B12A34">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta property="og:image" content="icons/icon-512.png">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="style.css">
+	<link rel="manifest" href="bank-view.webmanifest">
+	<script src="app.js" defer></script>
+</head>
+<body>
+<header>
+</header>
+<main>
+<style>
+input { 
+  margin: 20px;
+  padding: 15px;
+}
+
+input[type="date"]::-webkit-input-placeholder{ 
+    visibility: hidden !important;
+}
+</style>
+
+<form action="/" method="POST">
+Year <input name="year" type="number" placeholder="2019" value="2019" /><br />
+Month <input name="month" type="text" placeholder="08" value="08" /><br />
+
+<input type="submit" value="Submit" />
+
+<hr />
+</form>
+{{ body }} 
+
+</main>
+<footer>
+</footer>
+</body>
+</html>
