@@ -25,7 +25,7 @@ def create_app(test_config=None):
   @app.route("/scrape/<code>", methods=["GET"])
   def scrape(code):
     code = int(code)
-    cmd = "printf '{}\n' | docker exec -i hsbc-scrape python3 main.py".format(code)
+    cmd = "printf '{}\n' | sudo /usr/bin/docker exec -i hsbc-scrape python3 main.py".format(code)
     print("Running subprocess: {}".format(cmd))
     run(cmd, shell=True) # Run as subprocess NOTE may need to edit sudoers (visudo)
     return "Done"
