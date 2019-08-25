@@ -26,9 +26,10 @@ input[type="date"]::-webkit-input-placeholder{
 }
 </style>
 
+
 <form action="/" method="POST">
-Year <input name="year" type="number" placeholder="2019" value="{{ request.form.get('year', 2019) }}" /><br />
-Month <input name="month" type="text" placeholder="08" value="{{ request.form.get('month', '08') }}" /><br />
+Year <input name="year" type="number" placeholder="2019" value="{{ year}}" /><br />
+Month <input name="month" type="text" placeholder="08" value="{{ month }}" /><br />
 
 <input type="submit" value="Submit" />
 

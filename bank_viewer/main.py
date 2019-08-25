@@ -20,7 +20,8 @@ def create_app(test_config=None):
 
   @app.route("/transactions/<year>/<month>", methods=["GET"])
   def transactions_by_year_month(year, month):
-    return render_template('layout.html', body=calculate(year=year, month=month))
+    return render_template('layout.html', year=year, month=month, 
+                          body=calculate(year=year, month=month))
   
   @app.route("/scrape/<code>", methods=["GET"])
   def scrape(code):
